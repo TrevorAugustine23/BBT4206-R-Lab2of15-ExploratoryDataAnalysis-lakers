@@ -825,7 +825,7 @@ renv::snapshot()
 
 # NOTE: The lab work should be done in groups of between 2 and 5 members using
 #       Git and GitHub.
-
+ 
 ## Part A ----
 # Create a new file called "Lab2-Submission-ExploratoryDataAnalysis.R".
 # Provide all the code you have used to perform an exploratory data analysis of
