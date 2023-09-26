@@ -17,14 +17,14 @@ editor_options:
 
 # Student Details
 
-|                                                   |                                                                                                                                                                                                                                                                                                                                                             |               |
-|-------------|----------------------------------------------|-------------|
-| **Student ID Numbers and Names of Group Members** | *\<list one student name, class group (just the letter; A, B, or C), and ID per line, e.g., 123456 - A - John Leposo; you should be between 2 and 5 members per group\>* \| \| 1. 135203 - C - Tom Arnold \| \| 2. 131749 - C - Teresia Nungari \| \| 3. 134780 - C - Trevor Augustine \| 4. 132840 - C - Sheila Wangui \| \| 5. ID - Class Group - Name \| |               |
-|                                                   | **GitHub Classroom Group Name**                                                                                                                                                                                                                                                                                                                             | *\<Lakers\>*  |
-| **Course Code**                                   | BBT4206                                                                                                                                                                                                                                                                                                                                                     |               |
-| **Course Name**                                   | Business Intelligence II                                                                                                                                                                                                                                                                                                                                    |               |
-| **Program**                                       | Bachelor of Business Information Technology                                                                                                                                                                                                                                                                                                                 |               |
-| **Semester Duration**                             | 21^st^ August 2023 to 28^th^ November 2023                                                                                                                                                                                                                                                                                                                  |               |
+|                                                   |                                                                                                                                                                                                                                                                                                                                                             |              |
+|-----------------|---------------------------------------|-----------------|
+| **Student ID Numbers and Names of Group Members** | *\<list one student name, class group (just the letter; A, B, or C), and ID per line, e.g., 123456 - A - John Leposo; you should be between 2 and 5 members per group\>* \| \| 1. 135203 - C - Tom Arnold \| \| 2. 131749 - C - Teresia Nungari \| \| 3. 134780 - C - Trevor Augustine \| 4. 132840 - C - Sheila Wangui \| \| 5. ID - Class Group - Name \| |              |
+|                                                   | **GitHub Classroom Group Name**                                                                                                                                                                                                                                                                                                                             | *\<Lakers\>* |
+| **Course Code**                                   | BBT4206                                                                                                                                                                                                                                                                                                                                                     |              |
+| **Course Name**                                   | Business Intelligence II                                                                                                                                                                                                                                                                                                                                    |              |
+| **Program**                                       | Bachelor of Business Information Technology                                                                                                                                                                                                                                                                                                                 |              |
+| **Semester Duration**                             | 21^st^ August 2023 to 28^th^ November 2023                                                                                                                                                                                                                                                                                                                  |              |
 
 # Setup Chunk
 
@@ -90,7 +90,10 @@ The 20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset is then
 loaded. The dataset and its metadata are available here:
 <https://drive.google.com/drive/folders/1-BGEhfOwquXF6KKXwcvrx7WuZXuqmW9q?usp=sharing>
 
-```{r Load Dataset}
+```{library(readr)}
+X20230412_20230719_BI1_BBIT4_1_StudentPerformanceDataset <- read_csv("20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset.csv", 
+    skip = 1)
+View(X20230412_20230719_BI1_BBIT4_1_StudentPerformanceDataset)}
 student_performance_dataset <-
   readr::read_csv(
                   "../data/20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset.CSV", # nolint
@@ -232,7 +235,10 @@ student_performance_dataset <-
 We then display the number of observations and number of variables. We
 have 101 observations and 100 variables to work with.
 
-```{r Your Fourth Code Chunk}
+```{library(readr)
+X20230412_20230719_BI1_BBIT4_1_StudentPerformanceDataset <- read_csv("20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset.csv", 
+    skip = 1)
+View(X20230412_20230719_BI1_BBIT4_1_StudentPerformanceDataset)}
 dim(student_performance_dataset)
 ```
 
@@ -242,7 +248,10 @@ happening; tell us what you are discovering as you proceed with the
 markdown; walk us through your code step-by-step (a code
 walkthrough).*]{#highlight style="color: blue"}
 
-```{r Your Fifth Code Chunk}
+```{library(readr)
+X20230412_20230719_BI1_BBIT4_1_StudentPerformanceDataset <- read_csv("20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset.csv", 
+    skip = 1)
+View(X20230412_20230719_BI1_BBIT4_1_StudentPerformanceDataset)}
 summary(student_performance_dataset)
 ```
 
