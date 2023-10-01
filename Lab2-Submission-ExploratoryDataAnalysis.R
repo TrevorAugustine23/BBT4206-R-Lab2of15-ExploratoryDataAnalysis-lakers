@@ -129,3 +129,12 @@ sapply(Student[, 3],  skewness, type = 2)
 # Measure the covariance between variables
 Student_cov <- cov(Student[, 10])
 View(Student_cov)
+
+#Measure the correlation between variables
+Student_cor <- cor(Student[, 10])
+View(Student_cor)
+
+#ANOVA
+Student_one_way_anova <- aov( YOB ~ study_time, data = Student)
+summary(Student_one_way_anova)
+
