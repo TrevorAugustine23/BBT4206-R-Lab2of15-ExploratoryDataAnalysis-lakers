@@ -53,4 +53,53 @@ Student <- read_csv(
 View(Student)
 # Imported the dataset
 
+#Number of instances in each class
+Student_class_group_freq <- Student$class_group
+cbind(frequency = table(Student_class_group_freq),
+      percentage = prop.table(table(Student_class_group_freq)) * 100)
 
+Student_gender_freq <- Student$gender
+cbind(frequency = table(Student_gender_freq),
+      percentage = prop.table(table(Student_gender_freq)) * 100)
+
+Student_regret_choosing_bi_freq <- Student$regret_choosing_bi
+cbind(frequency = table(Student_regret_choosing_bi_freq),
+      percentage = prop.table(table(Student_regret_choosing_bi_freq)) * 100)
+
+Student_drop_bi_now_freq <- Student$regret_choosing_bi
+cbind(frequency = table(Student_drop_bi_now_freq),
+      percentage = prop.table(table(Student_drop_bi_now_freq)) * 100)
+
+Student_motivator_freq <- Student$motivator
+cbind(frequency = table(Student_motivator_freq),
+      percentage = prop.table(table(Student_motivator_freq)) * 100)
+
+#Measure of Central tendency
+#Calculate Mode
+Student_class_group_mode <- names(table(Student$class_group))[
+  which(table(Student$class_group) == max(table(Student$class_group)))
+]
+print(Student_class_group_mode)
+
+Student_gender_mode <- names(table(Student$gender))[
+  which(table(Student$gender) == max(table(Student$gender)))
+]
+print(Student_gender_mode)
+
+Student_regret_choosing_bi_mode <- names(table(Student$regret_choosing_bi))[
+  which(table(Student$regret_choosing_bi) == max(table(Student$regret_choosing_bi)))
+]
+print(Student_regret_choosing_bi_mode)
+
+Student_drop_bi_now_mode <- names(table(Student$drop_bi_now))[
+  which(table(Student$drop_bi_now) == max(table(Student$drop_bi_now)))
+]
+print(Student_drop_bi_now_mode)
+
+Student_motivator_mode <- names(table(Student$motivator))[
+  which(table(Student$motivator) == max(table(Student$motivator)))
+]
+print(Student_motivator_mode)
+
+# Measure the distribution of the data for each variable
+summary(Student)
