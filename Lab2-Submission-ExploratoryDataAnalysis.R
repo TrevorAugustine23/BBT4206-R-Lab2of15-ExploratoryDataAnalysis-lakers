@@ -48,7 +48,7 @@ Student <- read_csv(
     night_out = col_integer(),
     alcohol_or_narcotics = col_factor(levels = c("0","1")),
     mentor = col_factor(levels = c("0","1")),
-    mentor_meetings = col_factor(levels = c("0","1")),
+    mentor_meetings = col_integer()
   ))
 View(Student)
 # Imported the dataset
@@ -103,3 +103,10 @@ print(Student_motivator_mode)
 
 # Measure the distribution of the data for each variable
 summary(Student)
+
+#standard deviation
+sapply(Student[, 10], sd)
+
+#Measure the variance of each variable
+sapply(Student[, 10], var)
+
