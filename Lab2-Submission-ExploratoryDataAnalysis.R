@@ -138,3 +138,6 @@ View(Student_cor)
 Student_one_way_anova <- aov( YOB ~ study_time, data = Student)
 summary(Student_one_way_anova)
 
+#Histogram
+Student_YOB <- as.numeric(unlist(Student[, 4]))
+hist(Student_YOB, main = names(Student)[4])
