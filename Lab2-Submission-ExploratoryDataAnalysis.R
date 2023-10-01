@@ -110,3 +110,12 @@ sapply(Student[, 10], sd)
 #Measure the variance of each variable
 sapply(Student[, 10], var)
 
+#Kurtosis
+if (!is.element("e1071", installed.packages()[, 1])) {
+  install.packages("e1071", dependencies = TRUE)
+}
+require("e1071")
+sapply(Student[, 10],  kurtosis, type = 2)
+
+#skewness
+sapply(Student[, 10],  skewness, type = 2)
