@@ -106,9 +106,12 @@ summary(Student)
 
 #standard deviation
 sapply(Student[, 10], sd)
+sapply(Student[, 33], sd)
+
 
 #Measure the variance of each variable
 sapply(Student[, 10], var)
+sapply(Student[, 33], var)
 
 #Kurtosis
 if (!is.element("e1071", installed.packages()[, 1])) {
@@ -116,6 +119,13 @@ if (!is.element("e1071", installed.packages()[, 1])) {
 }
 require("e1071")
 sapply(Student[, 10],  kurtosis, type = 2)
+sapply(Student[, 33],  kurtosis, type = 2)
 
 #skewness
 sapply(Student[, 10],  skewness, type = 2)
+sapply(Student[, 3],  skewness, type = 2)
+
+# Measures of Relationship
+# Measure the covariance between variables
+Student_cov <- cov(Student[, 10])
+View(Student_cov)
